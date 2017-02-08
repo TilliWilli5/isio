@@ -1,6 +1,6 @@
 {
   "name": "isio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Contents indexer",
   "main": "isio.js",
   "scripts": {
@@ -10,7 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/TilliWilli5/isio.git"
   },
-  "keywords": ["debug", "development", "dev", "simple", "kiss", "light"],
+  "keywords": [
+    "debug",
+    "development",
+    "dev",
+    "simple",
+    "kiss",
+    "light"
+  ],
   "author": {
     "name": "TilliWilli",
     "email": "tilliwilli@gmail.com",
