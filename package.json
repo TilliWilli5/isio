@@ -1,0 +1,24 @@
+{
+  "name": "isio",
+  "version": "0.1.0",
+  "description": "Contents indexer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TilliWilli5/isio.git"
+  },
+  "keywords": ["debug", "development", "dev", "simple", "kiss", "light"],
+  "author": {
+    "name": "TilliWilli",
+    "email": "tilliwilli@gmail.com",
+    "url": "https://tilliwilli5.github.io/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TilliWilli5/isio/issues"
+  },
+  "homepage": "https://github.com/TilliWilli5/isio#readme"
+}
