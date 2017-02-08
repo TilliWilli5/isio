@@ -1,8 +1,6 @@
 "use strict";
 /*
 ================SPECA================
-ISIO IssueTracker IssueCreator Issue IS is.io isio
-
 is.increment        is.i
 is.untouched        is.o
 is.commit/.end/.print    is.c/is.end/is.print
@@ -14,7 +12,7 @@ is.null.i.c.i.c.i.c; - same same as is.null.i(3).c
 All shortcuts forms must be inline e.g. must works: is.null.i.c.i.c.i.c.z.z.z.z.z.i.c.o.o.i.commit
 =====================================
 */
-class IssueTracker
+class ISIO
 {
     constructor(pCore){
         if(pCore)
@@ -87,7 +85,7 @@ class IssueTracker
                 output = mirroredExposedContents.join(this.separator);
             }
         }
-        return `${digitDiff > 0 ?"0.".repeat(digitDiff):""}${output}`;
+        return `${digitDiff > 0 ?`0${this.separator}`.repeat(digitDiff):""}${output}`;
     }
     toString(){
         if(this.logOn)
@@ -102,12 +100,9 @@ class IssueTracker
     //
     //Public API
     //
-    Implant(pCore){
+    setup(pCore){
         if(pCore)
             Object.assign(this, pCore);
-    }
-    Setup(pCore){
-        this.Implant(pCore);
     }
     //
     //
@@ -162,8 +157,8 @@ class IssueTracker
         return this.set(pValue);
     }
 };
-module.exports = IssueTracker;
-IssueTracker._defaultCore = {
+module.exports = ISIO;
+ISIO._defaultCore = {
     separator:".",
     increment:1,
     // _contents:[],
@@ -177,8 +172,8 @@ IssueTracker._defaultCore = {
     fixedWidth:0
     // _buffer:[],
 };
-// IssueTracker.Create = function(pCore){
-//     let is = new IssueTracker(pCore);
+// ISIO.Create = function(pCore){
+//     let is = new ISIO(pCore);
 //     is.i = new Proxy(is.i, {
 //         get: (pTarget, pProp)=>{
 //             //console.log(pTarget, pProp);

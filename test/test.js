@@ -9,17 +9,17 @@ describe("<IssueTracker>", ()=>{
             assert.equal(is._ToRawString(), "0");
         });
         it(`${ver.i}Must return formatted output`, ()=>{
-            is.Setup({prefix:"\u26ab [", suffix:"]"});
+            is.setup({prefix:"\u26ab [", suffix:"]"});
             assert.equal(is.toString(), "\u26ab [0]");
         });
         it(`${ver.i}Setup`, ()=>{
-            is.Setup({prefix:"<", suffix:">"});
+            is.setup({prefix:"<", suffix:">"});
             assert.equal(is.o.o.i.o, "<0.0.1.0>");
         });
     });
     describe(`${ver.i.z}[Complex]`, ()=>{
         before(()=>{
-            is.Setup({prefix:"", suffix:""});
+            is.setup({prefix:"", suffix:""});
         });
         it(`${ver.i}Must return 0`, ()=>{
             assert.equal(is.null, "0");
@@ -50,7 +50,7 @@ describe("<IssueTracker>", ()=>{
     });
     describe(`${ver.i.z}[Sequences]`, ()=>{
         before(()=>{
-            is.Setup({logOn:false});
+            is.setup({logOn:false});
         });
         it(`${ver.i}multiple invoking of end must keep the same result`, ()=>{
             is.null.i.o.i.end;
@@ -120,11 +120,11 @@ describe("<IssueTracker>", ()=>{
     describe(`${ver.i.z}[FixWidth]`, ()=>{
         it(`${ver.i}fix width = 4`, ()=>{
             is.null.i.c;
-            is.Setup({fixedWidth:4});
+            is.setup({fixedWidth:4});
             assert.equal(is.print(), "0.0.0.1");
         });
         it(`${ver.i}fix width = 4`, ()=>{
-            is.Setup({fixedWidth:4});
+            is.setup({fixedWidth:4});
             is.null;
             assert.equal(is.print(), "0.0.0.0");
         });
