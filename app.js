@@ -10,3 +10,10 @@ console.log(output);
 
 is.setup({fixedWidth:4, separator:"-"});
 console.log(is.null.i.i.o.c.print());
+
+is.setup({fixedWidth:0, separator:"."});
+is.null.i.c;
+is.i.c;
+is.i.c;
+
+console.log(is+"");
