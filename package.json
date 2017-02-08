@@ -2,7 +2,7 @@
   "name": "isio",
   "version": "0.1.0",
   "description": "Contents indexer",
-  "main": "index.js",
+  "main": "isio.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
