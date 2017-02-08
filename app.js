@@ -1,6 +1,9 @@
-let ISIO = require("./isio.js");
-var is = new ISIO({prefix:"", suffix:"", logOn:false});
+let ISIO = require("../isio");
+let is = new ISIO();
 
-is.null.i.c.i.c;
-is.Setup({fixedWidth:4, separator:"|"});
-console.log(is+"");
+is.null;    // = 0
+is.o.i.o.c; // = 0.1.0
+is.o.i.o.c; // = 0.2.0
+is.o.i.i.c; // = 0.3.1
+let output = `Issue #${is}`;
+console.log(output);

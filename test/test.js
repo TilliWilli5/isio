@@ -4,13 +4,13 @@ let ISIO = require("../isio.js");
 let is = new ISIO();
 let ver = new ISIO({prefix:"", suffix:" "});
 describe("<IssueTracker>", ()=>{
-
     describe(`${ver.i.o}[Simple]`, ()=>{
         it(`${ver.i}Must return "0"`, ()=>{
             assert.equal(is._ToRawString(), "0");
         });
         it(`${ver.i}Must return formatted output`, ()=>{
-            assert.equal(is.toString(), " \u26ab [0]");
+            is.Setup({prefix:"\u26ab [", suffix:"]"});
+            assert.equal(is.toString(), "\u26ab [0]");
         });
         it(`${ver.i}Setup`, ()=>{
             is.Setup({prefix:"<", suffix:">"});
@@ -121,12 +121,12 @@ describe("<IssueTracker>", ()=>{
         it(`${ver.i}fix width = 4`, ()=>{
             is.null.i.c;
             is.Setup({fixedWidth:4});
-            assert.equal(is.print, "0.0.0.1");
+            assert.equal(is.print(), "0.0.0.1");
         });
         it(`${ver.i}fix width = 4`, ()=>{
             is.Setup({fixedWidth:4});
             is.null;
-            assert.equal(is.print, "0.0.0.0");
+            assert.equal(is.print(), "0.0.0.0");
         });
     });
 });

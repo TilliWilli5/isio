@@ -137,7 +137,7 @@ class IssueTracker
     }
     //Подумать здесь 3 одинаковых метода - нехорошо
     get end(){return this.toString();}
-    get print(){return this.toString();}
+    print(){return this.toString();}
     get c(){
         this._Terminate();
         return this;
@@ -169,8 +169,10 @@ IssueTracker._defaultCore = {
     // _contents:[],
     // _digitPointer:0,
     // _exposedDigit:0,
-    prefix:" \u26ab [",
-    suffix:"]",
+    // prefix:" \u26ab [",
+    // suffix:"]",
+    prefix:"",
+    suffix:"",
     logOn:false,
     fixedWidth:0
     // _buffer:[],
